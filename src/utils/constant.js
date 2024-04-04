@@ -1,21 +1,39 @@
 export const arrayOfProession = [
     {
-      profession  :" Student or soon to be enrolled "
+      profession  :" Student ",
+      optionalProfession:"or soon to be enrolled ",
+      id:1,
+      icon:"./student-icon.png"
     },
     {
-        profession  :"Professional pursuing a career "
+        profession  :"Professional  ",
+        optionalProfession:"pursuing a career",
+        id:2,
+        icon:"./professional-women.png" ,
     },
     {
-        profession  :" Parent of a school-age child"
+        profession  :" Parent ",
+        optionalProfession:"of a school-age child",
+        id:3,
+        icon:"./father-icon.png",
     },
     {
-        profession  :"Lifelong learner "
+        profession  :"Lifelong learner ",
+        optionalProfession:"",
+        id:4,
+        icon:"lifetimeLearner-icon.png",
     },
     {
-        profession  :" Teacher"
+        profession  :" Teacher",
+        optionalProfession:"",
+        id:5,
+        icon:"./teacher-icon.png",
     },
     {
-        profession  :"Other "
+        profession  :"Other " ,
+        optionalProfession:"",
+        id:6,
+        icon:"person-thinking-icon.png",
     },
 ] ;
 export const arrayOfInterestedLearning =[
