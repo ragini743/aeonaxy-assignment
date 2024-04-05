@@ -37,18 +37,27 @@ export const arrayOfProession = [
     },
 ] ;
 export const arrayOfInterestedLearning =[
-    {
+    {   id:1,
+        icon:"",
         description : " Learning specific skills to advanc my career"
     },{
+        id:2,
+        icon:"",
         description:"Exploring new topics I'm interested in"
     },
     {
+        id:3,
+        icon:"",
         description:"Refreshing my math foundations"
     },
-    {
+    {  
+        id:4,
+        icon:"",
         description:"Exercising my brain to stay sharp"
     },
-    {
+    { 
+        id:5,
+        icon:"",
         description:"Something else"
     }
 
