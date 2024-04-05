@@ -1,6 +1,7 @@
 import React, { useState } from 'react'
 import UserData from './UserData'
 import { arrayOfInterestedLearning, arrayOfProession } from '../utils/constant'
+import RightPlacePage from './RightPlacePage'
 
 const Body = ({handleContinue,isContinue,handlePageChange,currentPage}) => {
     
@@ -11,6 +12,9 @@ const Body = ({handleContinue,isContinue,handlePageChange,currentPage}) => {
        }
           {
         currentPage ===2 && <UserData heading={"Which are you most interested in ?"} text={" Choose just one .This will help us get you started (but won't limit your experience)."} dataArray = {arrayOfInterestedLearning} />
+       }
+       {
+        currentPage===3&& <RightPlacePage />
        }
         
 

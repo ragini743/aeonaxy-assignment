@@ -13,10 +13,11 @@ const UserData = ({heading,text ,dataArray}) => {
   return (
     <div>
         <div className='text-center'>
-          <h1 className='font-bold text-4xl'>
+          <h1 className='font-bold text-3xl  lg:text-4xl'>
              {heading}
           </h1>
-          <p className='text-gray-600 my-4'>{text}</p>
+          <p className=
+          'text-gray-600 my-4'>{text}</p>
         </div>
         <div className='w-[90%] sm:w-[80%] lg:w-[40%] mx-auto mt-12 '>
             {
