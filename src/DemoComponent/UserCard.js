@@ -4,7 +4,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome' ;
 
 
 const UserCard = ({data,isSelected,handleSelectOption}) => {
-    console.log("isSelected",data)
+    // console.log("isSelected",data)
   return (
     <div className={'border-gray-200 border-[1px] py-2 mb-4 rounded-lg pl-4 flex items-center ' + (isSelected? "shadow-custom border-red-200" :"")} onClick={() => handleSelectOption(data)}>
         <div className={'w-[10%] sm:w-[5%] mr-4  '}>

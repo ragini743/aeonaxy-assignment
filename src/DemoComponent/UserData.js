@@ -1,14 +1,10 @@
 import React, { useState } from 'react'
-import { arrayOfProession } from '../utils/constant'
+
 import UserCard from './UserCard'
 
-const UserData = ({heading,text ,dataArray}) => {
-    const [selectedOption,setSelectedOption] =useState(null) ;
-    const handleSelectOption = (option) => {
-        setSelectedOption(option);
-        console.log("option",option)
-      };
-      console.log("selectedOption",selectedOption)
+const UserData = ({heading,text ,dataArray,selectedOption,handleSelectOption}) => {
+  
+     
     
   return (
     <div>

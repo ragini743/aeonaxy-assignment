@@ -7,10 +7,10 @@ const RightPlacePage = () => {
            <img src=' ./weightmachine-icon.jpg'alt=''></img>
         </div>
         <div className='md:w-[50%] mt-4 md:mt-0'>
-            <h1 className='font-bold text-2xl mb-2'>
+            <h1 className='font-bold text-3xl  lg:text-4xl'>
                 You are the right place
             </h1>
-            <p>
+            <p className='text-gray-600'>
                 Brilliant gets you hands-on to help improve your professional skills and knowledge .You'll interact with concepts and solve fun problems in math ,science and computer science .
             </p>
         </div>

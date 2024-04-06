@@ -8,7 +8,7 @@ const AppLayout = () => {
     const loaderProgress = currentPage === 1 ? 10 :
     currentPage === 2 ? 20 :
     currentPage === 3 ? 30 :
-    currentPage === 4 ? 100 : // Assuming 100% progress for page 4
+    currentPage === 4 ? 40 : // Assuming 100% progress for page 4
     0;
     const [isContinue,setIsContinue] =useState(false)
     const handleContinue =() =>{

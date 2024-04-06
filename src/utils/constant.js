@@ -62,4 +62,32 @@ export const arrayOfInterestedLearning =[
     }
 
 
+];
+export const arrayOfEquation =[
+    {
+        equation:"5 * <sup>1</sup>&frasl;<sub>2</sub> = ?",
+        type:"ArithMetic",
+        level:"Introductory",
+
+    },
+    {
+        equation:"3x+5=4",
+        type:"Basic Algebra",
+        level:"Foundational",
+
+    },
+    {
+        equation:"x = <sup>-b ± <span>&radic;=(b<sup>2</sup> - 4ac)</span></sup> / <sub>2a</sub>",
+        type:"Intermediate Algebra",
+        level:"Intermediate",
+
+    },
+    {
+        equation:`
+        ∫<sub>0</sub><sup>L</sup> x<sup>2</sup> dx = ?
+      `,
+        type:"Calculus",
+        level:"Advanced",
+
+    },
 ]
