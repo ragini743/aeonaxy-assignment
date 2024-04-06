@@ -1,6 +1,7 @@
 import React, { useState } from 'react'
 import HorizontalLoader from './HorizontalLoader';
 import Body from './Body';
+import Skelton from './Skelton';
 
 const AppLayout = () => {
 
@@ -37,7 +38,7 @@ const AppLayout = () => {
       };
   return (
     <div>
-          {loaderProgress<=100 &&<div>
+          {loaderProgress<=100 ?<div>
             <header>
       
       <HorizontalLoader loaderProgress={loaderProgress} />
@@ -46,8 +47,8 @@ const AppLayout = () => {
         <Body handleContinue={handleContinue} isContinue={isContinue} setIsContinue={setIsContinue} currentPage ={currentPage} 
         handlePageChange={handlePageChange} selectedOption={selectedOption} handleSelectOption={handleSelectOption}  />
     </div>
-            </div>}
-   
+            </div>:  <Skelton />}
+       
         
     </div>
   )
