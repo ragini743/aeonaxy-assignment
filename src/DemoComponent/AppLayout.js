@@ -15,12 +15,13 @@ const AppLayout = () => {
     const loaderProgress = currentPage === 1 ? 10 :
     currentPage === 2 ? 20 :
     currentPage === 3 ? 30 :
-    currentPage === 4 ? 40 : // Assuming 100% progress for page 4
-    0;
+    currentPage === 4 ? 40 :
+    currentPage === 5 ? 100 :  // Assuming 100% progress for page 5
+    110;
  
     console.log("currentPage==3",currentPage===3)
     const handleContinue =() =>{
-        if(currentPage===2) {setIsContinue(true)}
+        if(currentPage===2||currentPage===4) {setIsContinue(true)}
 
       else{
         setIsContinue(!isContinue);
@@ -36,13 +37,17 @@ const AppLayout = () => {
       };
   return (
     <div>
-        <header>
-          <HorizontalLoader loaderProgress={loaderProgress} />
-        </header>
-        <div>
-            <Body handleContinue={handleContinue} isContinue={isContinue} setIsContinue={setIsContinue} currentPage ={currentPage} 
-            handlePageChange={handlePageChange} selectedOption={selectedOption} handleSelectOption={handleSelectOption}  />
-        </div>
+          {loaderProgress<=100 &&<div>
+            <header>
+      
+      <HorizontalLoader loaderProgress={loaderProgress} />
+    </header>
+    <div>
+        <Body handleContinue={handleContinue} isContinue={isContinue} setIsContinue={setIsContinue} currentPage ={currentPage} 
+        handlePageChange={handlePageChange} selectedOption={selectedOption} handleSelectOption={handleSelectOption}  />
+    </div>
+            </div>}
+   
         
     </div>
   )
