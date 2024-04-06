@@ -1,11 +1,10 @@
 import React from 'react'
 
-const MathEquation = ({equ}) => {
+const MathEquation = ({equ ,isSelected,handleSelectOption}) => {
     console.log("qe",equ)
     const {equation,type,level} = equ
   return (
-    <div className='px-2 py-4 border-[1px] border-gray-400
-     flex-1 flex flex-col justify-center items-center rounded-md '>
+   <div className={'px-2 py-4 border-[1px] border-gray-400 flex-1 flex flex-col justify-center items-center rounded-md ' + (isSelected ? "shadow-custom border-red-200" : "")} onClick={() => handleSelectOption(equ)}>
         <code className='text-gray-700 mb-4 mt-8  text-xl'  dangerouslySetInnerHTML={{ __html: equation }}>
       
         </code>

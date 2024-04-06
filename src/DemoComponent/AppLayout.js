@@ -3,18 +3,33 @@ import HorizontalLoader from './HorizontalLoader';
 import Body from './Body';
 
 const AppLayout = () => {
-    // const [loaderProgress,setLoaderProgress] = useState(10) ;
+
+    const [selectedOption,setSelectedOption] =useState(null) ;
+    const [isContinue,setIsContinue] =useState(false)
+  const handleSelectOption = (option) => {
+      setSelectedOption(option);
+   
+      setIsContinue(!isContinue)
+    };
     const [currentPage, setCurrentPage] = useState(1);
     const loaderProgress = currentPage === 1 ? 10 :
     currentPage === 2 ? 20 :
     currentPage === 3 ? 30 :
     currentPage === 4 ? 40 : // Assuming 100% progress for page 4
     0;
-    const [isContinue,setIsContinue] =useState(false)
+ 
+    console.log("currentPage==3",currentPage===3)
     const handleContinue =() =>{
-        setIsContinue(true)
-        // setLoaderProgress(loaderProgress+10)
-        handlePageChange(currentPage+1)
+        if(currentPage===2) {setIsContinue(true)}
+
+      else{
+        setIsContinue(!isContinue);
+
+        setSelectedOption(!selectedOption) ;
+      }
+      
+        handlePageChange(currentPage+1);
+       
     }
     const handlePageChange = (page) => {
         setCurrentPage(page);
@@ -25,8 +40,8 @@ const AppLayout = () => {
           <HorizontalLoader loaderProgress={loaderProgress} />
         </header>
         <div>
-            <Body handleContinue={handleContinue} isContinue={isContinue} currentPage ={currentPage} 
-            handlePageChange={handlePageChange} />
+            <Body handleContinue={handleContinue} isContinue={isContinue} setIsContinue={setIsContinue} currentPage ={currentPage} 
+            handlePageChange={handlePageChange} selectedOption={selectedOption} handleSelectOption={handleSelectOption}  />
         </div>
         
     </div>

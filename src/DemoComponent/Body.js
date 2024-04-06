@@ -4,15 +4,12 @@ import { arrayOfInterestedLearning, arrayOfProession } from '../utils/constant'
 import RightPlacePage from './RightPlacePage'
 import MathComfortLevelPage from './MathComfortLevelPage'
 
-const Body = ({handleContinue,isContinue,handlePageChange,currentPage}) => {
-  const [selectedOption,setSelectedOption] =useState(null) ;
-  const handleSelectOption = (option) => {
-      setSelectedOption(option);
-      console.log("option",option)
-    };
+const Body = ({handleContinue,isContinue,handlePageChange,currentPage ,handleSelectOption,selectedOption}) => {
+  
 
 
-    
+    console.log("isContinue",isContinue)
+    console.log("selectedOption",selectedOption)
   return (
     <div>
        {
@@ -22,16 +19,17 @@ const Body = ({handleContinue,isContinue,handlePageChange,currentPage}) => {
         currentPage ===2 && <UserData heading={"Which are you most interested in ?"} text={" Choose just one .This will help us get you started (but won't limit your experience)."} dataArray = {arrayOfInterestedLearning} handleSelectOption={handleSelectOption} selectedOption ={selectedOption}  />
        }
        {
-        currentPage===3&& <RightPlacePage />
+        currentPage===3&& <RightPlacePage  />
        }
        {
-        currentPage===4 &&<MathComfortLevelPage />
+        currentPage===4 &&<MathComfortLevelPage selectedOption={selectedOption
+        } handleSelectOption = {handleSelectOption} />
         }
         
 
 
         <div className='justify-center flex'>
-           <button className={' text-white px-6 rounded-md py-2 ' + (isContinue?"bg-black":"bg-gray-400")} onClick={handleContinue}>Continue</button>
+           <button className={' text-white px-6 rounded-md py-2 ' + (isContinue?"bg-black":"bg-gray-400")} onClick={isContinue? handleContinue :undefined}>Continue</button>
         </div>
     </div>
   )

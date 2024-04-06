@@ -2,7 +2,7 @@ import React from 'react'
 import { arrayOfEquation } from '../utils/constant'
 import MathEquation from './MathEquation'
 
-const MathComfortLevelPage = () => {
+const MathComfortLevelPage = ({selectedOption,handleSelectOption}) => {
   return (
     <div className=' mx-auto my-24'>
         <div className='text-center'>
@@ -18,7 +18,9 @@ const MathComfortLevelPage = () => {
             {
                 arrayOfEquation.map((equ,index) =>(
                     <React.Fragment key={index}>
-                        <MathEquation equ={equ} />
+                        <MathEquation equ={equ} key={equ.id}
+                  handleSelectOption={handleSelectOption} 
+                  isSelected = { selectedOption && selectedOption.id === equ.id}/>
                        
                     </React.Fragment>
                 ) )
