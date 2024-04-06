@@ -1,13 +1,15 @@
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import HorizontalLoader from './HorizontalLoader';
 import Body from './Body';
 import Skelton from './Skelton';
+import LearningPathMessage from './LearningPathMessage';
 
 const AppLayout = () => {
 
     const [selectedOption,setSelectedOption] =useState(null) ;
-    const [isContinue,setIsContinue] =useState(false)
-  const handleSelectOption = (option) => {
+    const [isContinue,setIsContinue] =useState(false);
+    const [isSkelton,setIsSkelton] = useState(true)
+ ;  const handleSelectOption = (option) => {
       setSelectedOption(option);
    
       setIsContinue(!isContinue)
@@ -36,6 +38,12 @@ const AppLayout = () => {
     const handlePageChange = (page) => {
         setCurrentPage(page);
       };
+
+    useEffect(() =>{
+      const timeout = setTimeout(() =>{setIsSkelton(false)},3000);
+      return() => clearTimeout(timeout) ;
+    },[])
+console.log("isSkelton",isSkelton)
   return (
     <div>
           {loaderProgress<=100 ?<div>
@@ -47,7 +55,7 @@ const AppLayout = () => {
         <Body handleContinue={handleContinue} isContinue={isContinue} setIsContinue={setIsContinue} currentPage ={currentPage} 
         handlePageChange={handlePageChange} selectedOption={selectedOption} handleSelectOption={handleSelectOption}  />
     </div>
-            </div>:  <Skelton />}
+            </div>:  (isSkelton?<Skelton />:<LearningPathMessage />)}
        
         
     </div>
