@@ -12,7 +12,8 @@ const AppLayout = () => {
  ;  const handleSelectOption = (option) => {
       setSelectedOption(option);
    
-      setIsContinue(!isContinue)
+      // setIsContinue(!isContinue)
+      setIsContinue(true)
     };
     const [currentPage, setCurrentPage] = useState(1);
     const loaderProgress = currentPage === 1 ? 10 :

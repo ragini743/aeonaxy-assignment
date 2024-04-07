@@ -7,10 +7,6 @@ import OnYourWayMessage from './OnYourWayMessage'
 
 const Body = ({handleContinue,isContinue,handlePageChange,currentPage ,handleSelectOption,selectedOption}) => {
   
-
-
-    console.log("isContinue",isContinue)
-    console.log("selectedOption",selectedOption)
   return (
     <div>
        {

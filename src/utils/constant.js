@@ -101,14 +101,16 @@ export const arrayOfLearningPath = [
         id:"1",
         type:"Foundational Math",
         text:"Build your foundational skills in algebra ,geoetry ,and probability",
-        imagePath:"./learningMath.jpg"
+        imagePath:"./learningMath.jpg",
+        label:"MOST POPULAR",
     },
     {
         id:"2",
         type:"MatheMatical Thinking",
 
         text:"Build your foundational skill in algebra ,geometry and probability .",
-        imagePath:"./learningMath.jpg"
+        imagePath:"./learningMath.jpg",
+        label:"",
     },
    
 
