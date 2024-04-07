@@ -30,7 +30,10 @@ const AppLayout = () => {
   const handleContinue = () => {
     if (currentPage === 2 || currentPage === 4) {
       setIsContinue(true);
-    } else {
+    } else if (currentPage === 5) {
+      handleSkeleton();
+    }
+    else {
       setIsContinue(!isContinue);
 
       setSelectedOption(!selectedOption);
@@ -42,12 +45,14 @@ const AppLayout = () => {
     setCurrentPage(page);
   };
 
-  useEffect(() => {
-    const timeout = setTimeout(() => {
+ 
+
+  const handleSkeleton = () => {
+    setIsSkelton(true)
+    setTimeout(() => {
       setIsSkelton(false);
-    }, 3000);
-    return () => clearTimeout(timeout);
-  }, []);
+    }, 4000);
+  }
  
   return (
     <div>
