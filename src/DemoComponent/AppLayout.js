@@ -51,7 +51,7 @@ const AppLayout = () => {
     setIsSkelton(true)
     setTimeout(() => {
       setIsSkelton(false);
-    }, 4000);
+    }, 2000);
   }
  
   return (
