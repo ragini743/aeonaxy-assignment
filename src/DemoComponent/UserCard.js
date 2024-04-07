@@ -7,7 +7,7 @@ const UserCard = ({ data, isSelected, handleSelectOption }) => {
     <div
       className={
         "border-gray-200 border-[1px] py-2 mb-4 rounded-lg pl-4 flex items-center " +
-        (isSelected ? "shadow-custom border-red-200" : "")
+        (isSelected ? "shadow-custom border-red-300 border-2" : "")
       }
       onClick={() => handleSelectOption(data)}
     >
